@@ -29,7 +29,7 @@ fxLayoutGap.xs="0">
 </div>
 
 <div fxFlex="40">
-  <mat-list fxFlex>
+  <mat-list fxFlex *ngIf="dish.comments">
       <h1>Comments</h1>
       <mat-list-item *ngFor="let comment of dish.comments">
         <h1 matLine>{{comment.comment}}</h1>
