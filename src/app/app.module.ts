@@ -20,6 +20,8 @@ import { FooterComponent } from './footer/footer.component';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
 
 import { DishService } from "./services/dish.service";
+import { PromotionService } from "./services/promotion.service";
+import { LeaderService } from "./services/leader.service";
 
 import { AppRoutingModule } from "./app-routing/app-routing.module";
 
@@ -46,7 +48,7 @@ import { AppRoutingModule } from "./app-routing/app-routing.module";
     MatButtonModule,
 
   ],
-  providers: [ DishService ],
+  providers: [ DishService, PromotionService, LeaderService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
