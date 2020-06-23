@@ -13,7 +13,7 @@ import { LeaderService } from '../services/leader.service';
 export class AboutComponent implements OnInit {
 
   
-  leaders: Leader[];
+  leaders: Leader[] = LEADERS ;
   
   constructor(private leaderservice: LeaderService) { }
 
@@ -21,7 +21,6 @@ export class AboutComponent implements OnInit {
     this.leaderservice.getleaders()
           .then((leaders) => this.leaders = leaders);
     
-   
   }
 
 
