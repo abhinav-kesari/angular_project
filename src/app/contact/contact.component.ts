@@ -46,7 +46,7 @@ export class ContactComponent implements OnInit {
     'email': {
       'required':      'Email is required.',
       'email':         'Email not in valid format.'
-    },
+    }
   };
 
 
