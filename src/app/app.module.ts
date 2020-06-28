@@ -18,6 +18,7 @@ import { MatSliderModule} from "@angular/material";
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms'
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
@@ -33,6 +34,7 @@ import { DishdetailComponent } from './dishdetail/dishdetail.component';
 import { DishService } from "./services/dish.service";
 import { PromotionService } from "./services/promotion.service";
 import { LeaderService } from "./services/leader.service";
+import { baseURL } from './shared/baseurl';
 
 import { AppRoutingModule } from "./app-routing/app-routing.module";
 import { LoginComponent } from './login/login.component';
@@ -56,6 +58,7 @@ import { LoginComponent } from './login/login.component';
     FlexLayoutModule,
     FormsModule,
     AppRoutingModule,
+    HttpClientModule,
     MatListModule,
     MatGridListModule,
     MatCardModule,
@@ -72,7 +75,8 @@ import { LoginComponent } from './login/login.component';
      
 
   ],
-  providers: [ DishService, PromotionService, LeaderService ],
+  providers: [ DishService, PromotionService, LeaderService ,
+    {provide: 'baseURL', useValue: baseURL}],
 
   entryComponents: [ LoginComponent ],
 
