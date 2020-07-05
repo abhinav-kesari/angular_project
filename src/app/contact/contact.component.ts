@@ -7,14 +7,7 @@ import { flyInOut } from "../animations/app.animation";
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
-   // tslint:disable-next-line:use-host-property-decorator
-   host: {
-    '[@flyInOut]': 'true',
-    'style': 'display: block;'
-    },
-  animations: [
-      flyInOut()
-    ]
+  
 })
 export class ContactComponent implements OnInit {
 

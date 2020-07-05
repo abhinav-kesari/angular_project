@@ -28,10 +28,10 @@ export class AboutComponent implements OnInit {
   constructor(private leaderservice: LeaderService) { }
 
   ngOnInit() {
-    this.leaderservice.getleaders()
+    this.leaderservice.getLeaders()
         .subscribe((leaders) => this.leaders = leaders);
     
-  }
+  } 
 
 
 }
